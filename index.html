@@ -19,16 +19,19 @@
   nav{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:10;backdrop-filter:blur(4px)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
   nav .brand{font-weight:bold;font-size:17px;color:var(--ink);text-decoration:none;letter-spacing:.3px}
-  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul{display:flex;gap:18px;list-style:none}
   nav a{color:var(--muted);text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:14px}
   nav a:hover{color:var(--accent)}
   header.hero{padding:64px 0 48px;border-bottom:1px solid var(--line)}
   .hero h1{font-size:40px;font-weight:normal;letter-spacing:.5px}
   .hero .role{font-family:Arial,Helvetica,sans-serif;color:var(--accent);font-size:15px;margin-top:6px;letter-spacing:.4px}
   .hero p.tag{color:var(--muted);margin-top:18px;max-width:640px}
+  .hero .seeking{font-family:Arial,Helvetica,sans-serif;display:inline-block;margin-top:16px;background:var(--accent-soft);color:var(--accent);font-size:13.5px;padding:6px 14px;border-radius:16px}
   .links{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
   .links a{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;text-decoration:none;color:var(--accent);border:1px solid var(--accent);padding:7px 14px;border-radius:4px;transition:background .15s,color .15s}
   .links a:hover{background:var(--accent);color:#fff}
+  .links a.primary{background:var(--accent);color:#fff}
+  .links a.primary:hover{background:#083d6e;border-color:#083d6e}
   section{padding:46px 0;border-bottom:1px solid var(--line)}
   section:last-of-type{border-bottom:none}
   h2{font-size:24px;font-weight:normal;margin-bottom:20px;color:var(--ink)}
@@ -36,18 +39,37 @@
   .research-block{margin-bottom:26px}
   .research-block h3{font-size:18px;margin-bottom:6px;color:var(--ink)}
   .research-block p{color:var(--muted);font-size:16px}
+  .themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:10px}
+  .theme{background:var(--bg-alt);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+  .theme h4{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:var(--accent);margin-bottom:8px;letter-spacing:.3px}
+  .theme p{color:var(--muted);font-size:14.5px}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .gallery figure{background:var(--bg-alt);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .gallery img,.gallery video{width:100%;height:190px;object-fit:cover;display:block;background:#0d1520}
+  .gallery figcaption{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:var(--muted);padding:10px 12px}
+  table.skills{width:100%;border-collapse:collapse;font-size:15.5px;margin-top:6px}
+  table.skills th{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;letter-spacing:.4px;text-transform:uppercase;color:var(--accent);text-align:left;padding:10px 14px;background:var(--accent-soft)}
+  table.skills td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+  table.skills td strong{color:var(--ink);font-weight:bold}
   .pub{margin-bottom:22px;padding-left:16px;border-left:3px solid var(--accent-soft)}
   .pub .title{font-weight:bold}
   .pub .authors{color:var(--muted);font-size:15.5px}
   .pub .venue{font-style:italic;color:var(--muted);font-size:15.5px}
+  .pub .focus{color:var(--muted);font-size:15px;margin-top:4px}
+  .pub .focus b{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:var(--accent);font-weight:bold;letter-spacing:.3px}
   .pub a{color:var(--accent);text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:13.5px}
   .pub a:hover{text-decoration:underline}
   .pub .status{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:12px;background:var(--accent-soft);color:var(--accent);padding:2px 9px;border-radius:10px;margin-left:6px;vertical-align:middle}
-  .toolbox{background:var(--bg-alt);border:1px solid var(--line);border-radius:6px;padding:16px 20px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:var(--muted);margin-top:8px}
-  ul.newslist{list-style:none}
-  ul.newslist li{padding:8px 0;border-bottom:1px dashed var(--line);color:var(--muted);font-size:16px}
-  ul.newslist li:last-child{border-bottom:none}
-  ul.newslist .yr{font-family:Arial,Helvetica,sans-serif;color:var(--accent);font-size:13px;margin-right:10px}
+  .edu-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+  .edu-card .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .edu-card h3{font-size:18px}
+  .edu-card .dates{font-family:Arial,Helvetica,sans-serif;color:var(--faint);font-size:13.5px;padding-top:4px}
+  .edu-card .inst{color:var(--muted);font-size:16px}
+  .edu-card ul{margin:10px 0 0 18px;color:var(--muted);font-size:15.5px}
+  .cv-box{margin-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--accent-soft);border-radius:6px;padding:16px 20px}
+  .cv-box span{color:var(--ink);font-size:15.5px}
+  .cv-box a{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;text-decoration:none;background:var(--accent);color:#fff;padding:9px 18px;border-radius:4px}
+  .cv-box a:hover{background:#083d6e}
   .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:6px}
   .contact-grid a{display:block;text-decoration:none;color:var(--ink);background:var(--bg-alt);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;transition:border-color .15s}
   .contact-grid a:hover{border-color:var(--accent)}
@@ -55,8 +77,8 @@
   footer{padding:30px 0;color:var(--faint);font-family:Arial,Helvetica,sans-serif;font-size:13px;text-align:center}
   @media(max-width:640px){
     .hero h1{font-size:31px}
-    nav ul{gap:14px}
-    nav a{font-size:12.5px}
+    nav ul{gap:11px}
+    nav a{font-size:12px}
     body{font-size:16px}
   }
 </style>
@@ -68,8 +90,9 @@
     <a class="brand" href="#top">Ivan Ehsan</a>
     <ul>
       <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#news">News</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -80,9 +103,10 @@
     <h1>Ivan Ehsan</h1>
     <div class="role">COMPUTATIONAL FLUID DYNAMICS RESEARCHER · IIT BOMBAY</div>
     <p class="tag">I study transport phenomena in complex, real-world geometries — from airflow, heat and aerosol transport in CT-reconstructed human airways to flow and combustion in engineering systems — combining patient-specific CFD simulation with hands-on experimental validation.</p>
+    <div class="seeking">Open to opportunities in fluid mechanics and related fields</div>
     <div class="links">
+      <a class="primary" href="assets/Ivan_Ehsan_CV.pdf" download>Download CV</a>
       <a href="https://scholar.google.com/citations?user=WETiA9wAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://www.linkedin.com/in/ivan-ehsan-2469a11b0" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/bondscar" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:ivanen911@gmail.com">Email</a>
     </div>
@@ -94,23 +118,62 @@
     <h2>Research</h2>
 
     <div class="research-block">
-      <h3>Patient-specific respiratory biofluid dynamics</h3>
-      <p>Using CT-scan-reconstructed nasal, oral, and bronchial airway geometries, I simulate airflow, heat and moisture exchange, and aerosol and nanoparticle transport under physiological breathing conditions. This work combines polyhedral meshing, species-transport modelling, Lagrangian–Eulerian particle tracking, and custom boundary conditions implemented through user-defined functions, with systematic validation against published experimental data. Applications include inhalation therapy, environmental exposure assessment, and airway physiology.</p>
+      <h3>Patient-specific biofluid mechanics</h3>
+      <p>3D CFD simulations using CT-scan-reconstructed human airway geometries: airflow, heat and moisture exchange, and aerosol and nanoparticle transport under varying, unsteady respiratory conditions. Built on polyhedral meshing, species-transport modelling, Lagrangian–Eulerian particle tracking, and custom boundary conditions through user-defined functions, with systematic validation against published experimental data.</p>
     </div>
 
     <div class="research-block">
-      <h3>CFD–experiment coupled studies of engineering systems</h3>
-      <p>At IIT Bombay, I work on CFD analysis of domestic pressure regulators for LPG systems and hydrogen–air premixed micro-combustors, paired with experimental prototype testing for validation. Earlier, at CSIR-CMERI and IIT Jodhpur, I worked on hydrogen mixing and combustion in SI engines, bio-fuel combustion, and designed and fabricated a micro gas turbine test rig with full optical and emissions instrumentation.</p>
+      <h3>Unsteady fluid dynamics &amp; complex flow physics</h3>
+      <p>Transient simulation of fluid and particle transport under time-varying boundary conditions; high-velocity hydrogen mixing and combustion in CONVERGE CFD; custom Fluent UDF development for unsteady wall and dynamic-meshing conditions.</p>
     </div>
 
     <div class="research-block">
-      <h3>Current interests</h3>
-      <p>Interface-resolved two-phase simulation with the Basilisk solver (volume-of-fluid methods), droplet dynamics, indicator transport in cardiovascular flows, and mixing physics under pulsatile conditions.</p>
+      <h3>CFD–experiment coupled studies</h3>
+      <p>At IIT Bombay, CFD analysis and experimental testing of domestic pressure regulators for LPG systems and hydrogen–air premixed micro-combustors. Earlier, at CSIR-CMERI and IIT Jodhpur: SI-engine combustion simulation, bio-fuel combustion, and design and fabrication of a micro gas turbine test rig with full optical and emissions instrumentation.</p>
     </div>
 
-    <div class="toolbox">
-      <strong>Toolbox:</strong> ANSYS Fluent (incl. UDFs in C) · CONVERGE CFD · OpenFOAM · Basilisk · SolidWorks · MATLAB · Linux · Experimental instrumentation — high-speed &amp; thermal imaging, spectrometry, DAQ, flow metering, gas analysis
+    <h3 style="font-size:18px;margin:30px 0 4px">Proposed research directions</h3>
+    <div class="themes">
+      <div class="theme">
+        <h4>PATIENT-SPECIFIC HEMODYNAMIC MODELLING</h4>
+        <p>Translating clinical imaging (CT/MRI) into high-resolution cardiovascular geometries; transient, pulsatile blood-flow physics under resting and stressed physiological conditions.</p>
+      </div>
+      <div class="theme">
+        <h4>COUPLED COMPUTATIONAL–EXPERIMENTAL FRAMEWORKS</h4>
+        <p>Workflows where high-fidelity CFD metrics — wall shear stress, pressure drops — are directly validated with optical and pressure–flow diagnostics on physical setups.</p>
+      </div>
+      <div class="theme">
+        <h4>NUMERICAL CUSTOMISATION &amp; DIAGNOSTIC OPTIMISATION</h4>
+        <p>Custom code development (UDFs) and data-driven analysis that turn complex hydrodynamic data into clear, interpretable metrics supporting clinical decision-making.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="gallery-section">
+  <div class="wrap">
+    <h2>Research in pictures</h2>
+    <div class="gallery">
+      <figure><video src="media/vortex-merger.mp4" autoplay muted loop playsinline onerror="this.parentElement.style.display='none'"></video><figcaption>Two-vortex merger — vorticity field at Re = 5000 (Basilisk)</figcaption></figure>
+      <figure><img src="media/airway-cfd.jpg" alt="Patient-specific airway CFD simulation" onerror="this.parentElement.style.display='none'"><figcaption>Patient-specific airway CFD — nanoparticle deposition</figcaption></figure>
+      <figure><img src="media/micro-gas-turbine.jpg" alt="Micro gas turbine fabrication" onerror="this.parentElement.style.display='none'"><figcaption>Fabrication of micro gas turbine</figcaption></figure>
+      <figure><img src="media/thermal-imaging.jpg" alt="Thermal imaging of flame" onerror="this.parentElement.style.display='none'"><figcaption>Thermal imaging experience</figcaption></figure>
+      <figure><img src="media/validation.jpg" alt="Experiment and numerical validation" onerror="this.parentElement.style.display='none'"><figcaption>Experiment and numerical validation</figcaption></figure>
+      <figure><img src="media/spectrometer.jpg" alt="Spectrometer measurement setup" onerror="this.parentElement.style.display='none'"><figcaption>Spectrometer flame measurement and MATLAB analysis</figcaption></figure>
+      <figure><img src="media/insulation.jpg" alt="Composite insulation material evaluation" onerror="this.parentElement.style.display='none'"><figcaption>Evaluation of composite insulation coating</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Computational &amp; experimental skills</h2>
+    <table class="skills">
+      <tr><th>Computational</th><th>Experimental analogs</th></tr>
+      <tr><td><strong>CFD solvers:</strong> ANSYS Fluent, CONVERGE, OpenFOAM, Basilisk</td><td><strong>Flow loops:</strong> DAQ systems, ALICAT mass-flow meters, Testo 350 gas analyzer</td></tr>
+      <tr><td><strong>Customisation:</strong> Fluent UDF coding (C), MATLAB analysis</td><td><strong>Visualisation:</strong> High-speed Phantom cameras, CCD, StellarNet spectrometer</td></tr>
+      <tr><td><strong>Post-processing:</strong> Tecplot, ANSYS post, OriginLab</td><td><strong>Diagnostics:</strong> FLIR thermography, exhaust and emissions analysis</td></tr>
+    </table>
   </div>
 </section>
 
@@ -122,6 +185,7 @@
       <div class="title">Tracing aerosols in the human airways: The hidden role of temperature gradients</div>
       <div class="authors">S. Samanta, <strong>I. Ehsan</strong>, H. Hirani, S. Chakraborty</div>
       <div class="venue">International Communications in Heat and Mass Transfer, 2026</div>
+      <div class="focus"><b>KEY FOCUS</b> — Thermophoretic aerosol transport in CT-reconstructed nasal and oral airways using a coupled airflow–heat–particle framework.</div>
       <a href="https://doi.org/10.1016/j.icheatmasstransfer.2026.110882" target="_blank" rel="noopener">doi:10.1016/j.icheatmasstransfer.2026.110882</a>
     </div>
 
@@ -129,6 +193,7 @@
       <div class="title">Anatomically-trained patient-specific in-silico simulations for predicting thermo-regulation and humidification in human body upper respiratory pathways</div>
       <div class="authors">S. Samanta, <strong>I. Ehsan</strong>, H. Hirani, S. Chakraborty</div>
       <div class="venue">International Journal of Thermal Sciences, 2026</div>
+      <div class="focus"><b>KEY FOCUS</b> — Heat and water-vapor transport analysed across two distinct airway geometries: a nasal and an oral airway model.</div>
       <a href="https://doi.org/10.1016/j.ijthermalsci.2025.110461" target="_blank" rel="noopener">doi:10.1016/j.ijthermalsci.2025.110461</a>
     </div>
 
@@ -136,6 +201,7 @@
       <div class="title">Patient-specific simulation of particle dynamics in the respiratory airways from CT-scan-reconstructed images using a continuous phase modelling framework</div>
       <div class="authors">S. Samanta, <strong>I. Ehsan</strong>, H. Hirani, S. Chakraborty</div>
       <div class="venue">Computer Methods and Programs in Biomedicine, 2025</div>
+      <div class="focus"><b>KEY FOCUS</b> — Baseline computational framework for patient-specific airway reconstruction and particle dynamics.</div>
       <a href="https://doi.org/10.1016/j.compbiomed.2025.110354" target="_blank" rel="noopener">doi:10.1016/j.compbiomed.2025.110354</a>
     </div>
 
@@ -147,16 +213,26 @@
   </div>
 </section>
 
-<section id="news">
+<section id="education">
   <div class="wrap">
-    <h2>News</h2>
-    <ul class="newslist">
-      <li><span class="yr">2026</span>Paper on aerosol transport and temperature gradients published in <em>Int. Commun. Heat Mass Transfer</em></li>
-      <li><span class="yr">2026</span>Paper on airway thermo-regulation and humidification published in <em>Int. J. Thermal Sciences</em></li>
-      <li><span class="yr">2026</span>Joined IIT Bombay as Project Research Assistant</li>
-      <li><span class="yr">2025</span>Paper on patient-specific particle dynamics published in <em>Comput. Methods Programs Biomed.</em></li>
-      <li><span class="yr">2025</span>Qualified GATE (Mechanical Engineering)</li>
-    </ul>
+    <h2>Education</h2>
+    <div class="edu-card">
+      <div class="row">
+        <div>
+          <h3>Bachelor of Technology, Mechanical Engineering</h3>
+          <div class="inst">National Institute of Technology Mizoram · Aizawl, India</div>
+        </div>
+        <div class="dates">2018 – 2022</div>
+      </div>
+      <ul>
+        <li>Final-year research project: <em>Power Generation from Freestream Water Using a Hydrokinetic Savonius Turbine</em></li>
+        <li>GATE 2025 qualified (Mechanical Engineering)</li>
+      </ul>
+    </div>
+    <div class="cv-box">
+      <span>Full academic CV — education, research experience, publications and skills.</span>
+      <a href="assets/Ivan_Ehsan_CV.pdf" download>Download CV (PDF)</a>
+    </div>
   </div>
 </section>
 
@@ -167,7 +243,6 @@
     <div class="contact-grid">
       <a href="mailto:ivanen911@gmail.com"><span class="lbl">Email</span>ivanen911@gmail.com</a>
       <a href="https://scholar.google.com/citations?user=WETiA9wAAAAJ" target="_blank" rel="noopener"><span class="lbl">Google Scholar</span>Publications profile</a>
-      <a href="https://www.linkedin.com/in/ivan-ehsan-2469a11b0" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span>ivan-ehsan</a>
       <a href="https://github.com/bondscar" target="_blank" rel="noopener"><span class="lbl">GitHub</span>bondscar</a>
     </div>
   </div>
@@ -176,6 +251,18 @@
 <footer>
   <div class="wrap">© 2026 Ivan Ehsan · Mumbai, India</div>
 </footer>
+
+<script>
+window.addEventListener('load',function(){
+  var g=document.querySelectorAll('#gallery-section figure');
+  var visible=0;
+  g.forEach(function(f){if(f.style.display!=='none')visible++;});
+  var imgs=document.querySelectorAll('#gallery-section img');
+  var loaded=0;
+  imgs.forEach(function(im){if(im.complete&&im.naturalWidth>0)loaded++;});
+  if(loaded===0){document.getElementById('gallery-section').style.display='none';}
+});
+</script>
 
 </body>
 </html>
